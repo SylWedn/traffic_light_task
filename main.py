@@ -51,7 +51,7 @@ def count_complete_cycles(data):
     for light in data:
         current_state = (light.red, light.yellow, light.green)
         # new loop
-        if state is None or (state == (0, 0, 1) and current_state == (1, 0, 0)):
+        if state is None:
             state = current_state
             continue
         # checking next loop step
